@@ -1,0 +1,29 @@
+{
+  "name": "docs-template",
+  "version": "1.0.0",
+  "description": "基于vuepress搭建的文档系统",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "keywords": [
+    "vue",
+    "doc",
+    "vuepress"
+  ],
+  "author": "coyle",
+  "devDependencies": {
+    "@vuepress/plugin-google-analytics": "^1.7.1",
+    "@vuepress/plugin-pwa": "^1.7.1",
+    "@vuepress/theme-default": "^1.7.1",
+    "element-ui": "^2.14.0",
+    "sass": "^1.29.0",
+    "sass-loader": "^10.0.5",
+    "vue": "^2.6.12",
+    "vuepress": "^1.7.1"
+  }
+}
