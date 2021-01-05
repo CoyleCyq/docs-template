@@ -2,8 +2,8 @@ const path = require('path');
 const fs = require('fs');
 
 module.exports = {
-  title: "文档系统",
-  description: '文档系统的框架',
+  title: "文档系统", // 标题
+  description: '文档系统的框架', // 描述
   head: [ 
     ['link', { rel: 'icon', href: '/img/favicon.ico' }]
   ],
@@ -11,46 +11,44 @@ module.exports = {
   themeConfig: {
     lastUpdated: 'Last Updated', // 最后更新时间
     sidebarDepth: 2, // 侧边栏搜索深度，将同时提取 h2 和 h3 标题。
-    // 导航
+    // 导航栏配置
     nav: [
       {
-        text: '目录1',
-        link: '/category1/guide'
+        text: 'VuePress说明',
+        link: '/vuepress/guide'
       },
       {
         text: '目录2',
         link: '/category2/guide'
       }
     ],
+    // 侧边栏配置
     sidebar: {
-      "/category1/": [
+      "/vuepress/": [
         "guide",
         {
-          title: '文档1',
+          title: '语法介绍',
           collapsable: false,
-          children: genSidebarConfig("category1/child1", true)
+          children: [
+            'child1/doc1',
+            'child1/doc2'
+          ]
         },
-        {
-          title: '文档2',
-          collapsable: false,
-          children: genSidebarConfig("category1/child2", true)
-        }
       ],
       "/category2/": [
         "guide",
         {
-          title: '文档1',
+          title: '子目录1',
           collapsable: false,
           children: genSidebarConfig("category2/child1", true)
+        },
+        {
+          title: '子目录2',
+          collapsable: false,
+          children: genSidebarConfig("category2/child2", true)
         }
       ]
     }
-  },
-  sass: { indentedSyntax: true },
-  plugins: {
-    '@vuepress/pwa': {
-      serviceWorker: true
-    },
   }
 };
 

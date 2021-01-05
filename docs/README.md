@@ -2,7 +2,7 @@
 home: true
 heroImage: ./img/logo.png
 actionText: 文档 →
-actionLink: /category1/guide
+actionLink: /vuepress/guide
 features:
 - title: 代码规范
   details: ERP 项目组的代码规范，开发流程
