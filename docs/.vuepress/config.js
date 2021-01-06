@@ -30,8 +30,9 @@ module.exports = {
           title: '语法介绍',
           collapsable: false,
           children: [
-            'child1/doc1',
-            'child1/doc2'
+            'summary/markdown',
+            'summary/vue-spec',
+            'summary/api-demo'
           ]
         },
       ],

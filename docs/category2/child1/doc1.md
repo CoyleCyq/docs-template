@@ -1,3 +1,3 @@
-# vue
+# javascript 教程
 
-vue 教程
+javascript 教程

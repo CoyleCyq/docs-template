@@ -139,3 +139,30 @@ export default { // Highlighted
   }
 }
 ```
+
+## 本地项目图片
+
+- 输入
+
+```html
+<!-- $withBase: 是VuePress提供的方法，接收一个参数，返回 基础路径 + 参数 的 url -->
+<!-- 基础路径在config.js配置，默认是 base: '/' -->
+<img :src="$withBase('/img/image1.jpg')">
+```
+
+- 输出
+
+<img :src="$withBase('/img/image1.jpg')">
+
+
+## 大图预览
+
+- 输入
+
+```html
+<!-- 使用elementUI提供的el-image组件 -->
+<el-image :src="$withBase('/img/image1.jpg')" :preview-src-list="[$withBase('/img/image1.jpg')]" />
+```
+- 输出
+
+<el-image :src="$withBase('/img/image1.jpg')" :preview-src-list="[$withBase('/img/image1.jpg')]" />
