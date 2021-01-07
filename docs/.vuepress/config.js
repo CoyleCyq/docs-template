@@ -50,7 +50,11 @@ module.exports = {
         }
       ]
     }
-  }
+  },
+  plugins:[
+    ['flowchart'],
+    ['@vuepress/medium-zoom', true],
+  ]
 };
 
 function genSidebarConfig(dir, hasSub) {

@@ -71,17 +71,23 @@
 
 - 输入
 
-````
+````html
 <code-group>
-<code-block title="YARN" active>
-```bash
-yarn create vuepress-site [optionalDirectoryName]
+<code-block title="JS" active>
+```js
+function sum(a, b) {
+  return a + b
+}
+sum(123, 456)
 ```
 </code-block>
 
-<code-block title="NPM">
-```bash
-npx create-vuepress-site [optionalDirectoryName]
+<code-block title="TS">
+```ts
+function sum(a: number, b: number): number {
+  return a + b
+}
+sum(123, 456)
 ```
 </code-block>
 </code-group>
@@ -90,15 +96,21 @@ npx create-vuepress-site [optionalDirectoryName]
 - 输出
 
 <code-group>
-<code-block title="YARN" active>
-```bash
-yarn create vuepress-site [optionalDirectoryName]
+<code-block title="JS" active>
+```js
+function sum(a, b) {
+  return a + b
+}
+sum(123, 456)
 ```
 </code-block>
 
-<code-block title="NPM">
-```bash
-npx create-vuepress-site [optionalDirectoryName]
+<code-block title="TS" >
+```ts
+function sum(a: number, b: number): number {
+  return a + b
+}
+sum(123, 456)
 ```
 </code-block>
 </code-group>
@@ -140,7 +152,7 @@ export default { // Highlighted
 }
 ```
 
-## 本地项目图片
+## 本地项目图片 + 图片预览
 
 - 输入
 
@@ -151,18 +163,90 @@ export default { // Highlighted
 ```
 
 - 输出
-
 <img :src="$withBase('/img/image1.jpg')">
 
+## 流程图
 
-## 大图预览
+> [流程图使用教程](https://flowchart.vuepress.ulivz.com/#install)
 
 - 输入
-
-```html
-<!-- 使用elementUI提供的el-image组件 -->
-<el-image :src="$withBase('/img/image1.jpg')" :preview-src-list="[$withBase('/img/image1.jpg')]" />
 ```
+@flowstart
+st=>start: Start|past:>http://www.google.com[blank]
+e=>end: End|future:>http://www.google.com
+op1=>operation: My Operation|past
+op2=>operation: Stuff|current
+sub1=>subroutine: My Subroutine|invalid
+cond=>condition: Yes
+or No?|approved:>http://www.google.com
+c2=>condition: Good idea|rejected
+io=>inputoutput: catch something...|future
+
+st->op1(right)->cond
+cond(yes, right)->c2
+cond(no)->sub1(left)->op1
+c2(yes)->io->e
+c2(no)->op2->e
+@flowend
+```
+
+- 输出
+@flowstart
+st=>start: Start|past:>http://www.google.com[blank]
+e=>end: End|future:>http://www.google.com
+op1=>operation: My Operation|past
+op2=>operation: Stuff|current
+sub1=>subroutine: My Subroutine|invalid
+cond=>condition: Yes
+or No?|approved:>http://www.google.com
+c2=>condition: Good idea|rejected
+io=>inputoutput: catch something...|future
+
+st->op1(right)->cond
+cond(yes, right)->c2
+cond(no)->sub1(left)->op1
+c2(yes)->io->e
+c2(no)->op2->e
+@flowend
+
+
+- 下一个例子
+
+- 输入
+```
+@flowstart ant
+st=>start: Start:>http://www.google.com[blank]
+e=>end:>http://www.google.com
+op1=>operation: My Operation
+sub1=>subroutine: My Subroutine
+cond=>condition: Yes
+or No?:>http://www.google.com
+io=>inputoutput: catch something...
+para=>parallel: parallel tasks
+
+st->op1->cond
+cond(yes)->io->e
+cond(no)->para
+para(path1, bottom)->sub1(right)->op1
+para(path2, top)->op1
+@flowend
+```
+
 - 输出
 
-<el-image :src="$withBase('/img/image1.jpg')" :preview-src-list="[$withBase('/img/image1.jpg')]" />
+@flowstart ant
+st=>start: Start:>http://www.google.com[blank]
+e=>end:>http://www.google.com
+op1=>operation: My Operation
+sub1=>subroutine: My Subroutine
+cond=>condition: Yes
+or No?:>http://www.google.com
+io=>inputoutput: catch something...
+para=>parallel: parallel tasks
+
+st->op1->cond
+cond(yes)->io->e
+cond(no)->para
+para(path1, bottom)->sub1(right)->op1
+para(path2, top)->op1
+@flowend

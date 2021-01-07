@@ -111,11 +111,23 @@ _Compact style:_
 - 输入
 
 ```
-![Minion](https://octodex.github.com/images/minion.png)
-![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
+![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg)
 ```
 
 - 输出
+![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg)
 
-![Minion](https://octodex.github.com/images/minion.png)
-![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
+
+## 本地图片
+
+- 输入
+```
+![](/img/image1.jpg)
+```
+
+- 输出
+![](/img/image1.jpg)
+
+
+
+

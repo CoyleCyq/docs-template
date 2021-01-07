@@ -18,12 +18,14 @@
   "author": "coyle",
   "devDependencies": {
     "@vuepress/plugin-google-analytics": "^1.8.0",
+    "@vuepress/plugin-medium-zoom": "1.8.0",
     "@vuepress/plugin-pwa": "^1.8.0",
     "@vuepress/theme-default": "^1.8.0",
     "element-ui": "^2.14.0",
     "sass": "^1.29.0",
     "sass-loader": "^10.0.5",
     "vue": "^2.6.12",
-    "vuepress": "^1.8.0"
+    "vuepress": "^1.8.0",
+    "vuepress-plugin-flowchart": "^1.4.2"
   }
 }

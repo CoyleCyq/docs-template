@@ -1,3 +1,8 @@
-# javascript 教程
+---
+title: Blogging with VuePress1
+lang: en-US
+---
 
-javascript 教程
+# {{ $frontmatter.title }}
+
+My blog post is written in {{ $frontmatter.lang }}.
